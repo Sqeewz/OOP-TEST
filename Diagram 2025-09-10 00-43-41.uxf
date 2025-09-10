@@ -1,0 +1,97 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>98</x><y>175</y><w>294</w><h>217</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+/LibraryItem/
+--
+- _title: string;
+# itemId: string;
+-  _available: boolean;
+--
+constructor(
++title: string,
++itemId: string,
++available: boolean = true
+)
++Getter titile():string
++Setter available(av:boolean):void
++getid():string
++isAvailable():boolean
++borrow(memberName: string): string
++returnItem(): string 
++abstract getDetails(): string;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>98</x><y>455</y><w>308</w><h>168</h></coordinates><panel_attributes>Library
+--
+ - items: LibraryItem[]
+ - members: LibraryMember[]
+
+--
+
++ addItem(item: LibraryItem): void 
++ findItemById(itemId: string): LibraryItem | undefined 
++ findMemberById(memberId: string): LibraryMember | undefined 
++ borrowItem(memberId: string, itemId: string): string
++ returnItem(memberId: string, itemId: string): string
++ getLibrarySummary(): string </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>231</x><y>14</y><w>154</w><h>112</h></coordinates><panel_attributes>Book
+--
+ - author:string
+--
+constructor(
++title: string,
++ itemId: string,
+- author: string, 
++available: boolean 
+)
++ getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>14</y><w>119</w><h>119</h></coordinates><panel_attributes>Magazine
+--
+ - issueDate:string
+--
+constructor(
++title: string,
++ itemId: string,
+- issueDate: string, 
++available: boolean 
+)
++ getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>616</x><y>21</y><w>112</w><h>112</h></coordinates><panel_attributes>DVD_TH
+--
+ - durationMin:number
+--
+constructor(
++title: string,
++ itemId: string,
+- durationMin: number, 
++available: boolean 
+)
++ getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>742</x><y>21</y><w>126</w><h>105</h></coordinates><panel_attributes>NoteBook_CS2455
+
+--
+constructor(
++title: string,
++ itemId: string,
++available: boolean 
+)
++ getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>21</y><w>154</w><h>105</h></coordinates><panel_attributes>Headphone_CS2425
+
+--
+constructor(
++title: string,
++ itemId: string,
++available: boolean 
+)
++ getDetails(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>119</x><y>126</y><w>77</w><h>63</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>238</x><y>119</y><w>84</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>336</x><y>119</y><w>147</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;190;10</additional_attributes></element><element><id>Relation</id><coordinates><x>385</x><y>126</y><w>259</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;130;160;50;350;10</additional_attributes></element><element><id>Relation</id><coordinates><x>385</x><y>119</y><w>406</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;180;560;10</additional_attributes></element><element><id>Relation</id><coordinates><x>196</x><y>385</y><w>21</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>623</x><y>266</y><w>182</w><h>91</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Borrowable/
+--
++borrow(memberName: string): string
++returnItem(): string
++isAvailable(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>399</x><y>511</y><w>119</w><h>21</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>448</y><w>343</w><h>224</h></coordinates><panel_attributes>LibraryMember
+--
+- _memberName: string
+- _memberId: string
+- _borrowedItems: LibraryItem[]
+--
+constructor(
++memberName: string, 
++memberId: string
+)
++Getter memberName(): string
++Getter memberId(): string
++borrowItem(item: LibraryItem): string 
++returnItem(itemId: string): string
++listBorrowedItems(): string
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>385</x><y>308</y><w>252</w><h>35</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;340;30</additional_attributes></element></diagram>
